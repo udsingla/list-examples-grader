@@ -14,3 +14,19 @@ echo 'Finished cloning'
 
 # Then, add here code to compile and run, and do any post-processing of the
 # tests
+contains = `false`
+for file in `find student-submission`
+do
+  if [[ -f $file ]] && [[ $file == ListExamples.java ]]
+  then
+    contains = true
+  fi
+done
+
+if [[$contains == true]]
+then
+  cp ListExamples.java grading-area/
+else
+  echo "File not found."
+  System.exit(1)
+fi
