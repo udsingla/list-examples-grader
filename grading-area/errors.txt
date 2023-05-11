@@ -1,0 +1,4 @@
+grading-area\ListExamples.java:7: error: ';' expected
+  horrible error
+                ^
+1 error
